@@ -62,7 +62,7 @@ export default function HomePage() {
   if (!connection) {
     return (
       <div className="stack">
-        <section className="hero card">
+        <section className="hero card brand-hero">
           <p className="kicker">Sophos Firewall</p>
           <h1>Pocketwall</h1>
           <p>See the policy, change a rule, and put the firewall back in your pocket. Built for SFOS 23 and its REST API.</p>

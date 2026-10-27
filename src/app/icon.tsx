@@ -3,6 +3,9 @@ import { ImageResponse } from "next/og";
 export const size = { width: 512, height: 512 };
 export const contentType = "image/png";
 
+const shield =
+  "M1.38135 1.33838V10.0461C1.38135 11.523 2.18301 12.8799 3.47493 13.5968L12.5584 18.6276L12.617 18.6615L21.7437 13.5999C23.0356 12.883 23.8373 11.5261 23.8373 10.0522V1.33838H1.38135ZM15.9994 11.6553C15.3211 12.0307 14.5595 12.2276 13.7856 12.2276L5.36193 12.203L10.0856 9.5753C10.5419 9.31992 11.0538 9.18761 11.5779 9.18453L20.4949 9.15684L16.0025 11.6584L15.9994 11.6553ZM15.8699 7.35376C15.4136 7.60915 14.9018 7.74146 14.3776 7.74453L5.4606 7.77223L9.95301 5.27069C10.6313 4.8953 11.3929 4.69838 12.1668 4.69838L20.5905 4.72299L15.8668 7.35069L15.8699 7.35376Z";
+
 export default function Icon() {
   return new ImageResponse(
     (
@@ -13,26 +16,12 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#071018",
+          background: "#0a143a",
         }}
       >
-        <div
-          style={{
-            width: 340,
-            height: 340,
-            borderRadius: 88,
-            background: "#102833",
-            border: "16px solid #3ee0c5",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#3ee0c5",
-            fontSize: 180,
-            fontWeight: 800,
-          }}
-        >
-          P
-        </div>
+        <svg width="300" height="240" viewBox="0 0 25.2 20">
+          <path d={shield} fill="#2006F7" />
+        </svg>
       </div>
     ),
     size

@@ -15,6 +15,15 @@ const more = [
   { href: "/settings", title: "Settings", detail: "Connection and allowed IP" },
 ];
 
+export function BrandBar() {
+  return (
+    <header className="brandbar">
+      <img src="/brand/sophos-logo-on-dark.svg" alt="Sophos" />
+      <span className="brandbar-product">Pocketwall</span>
+    </header>
+  );
+}
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -22,6 +31,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <BrandBar />
       <main className="app-main">
         <Suspense fallback={<p className="muted">Loading…</p>}>{children}</Suspense>
       </main>

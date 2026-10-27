@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AppShell } from "@/components/AppShell";
+import { AppShell, BrandBar } from "@/components/AppShell";
 import { setApiConnection } from "@/lib/api";
 import { ConnectionProvider, useConnection } from "@/lib/connection";
 import { Banner, TextField } from "@/components/ui";
@@ -46,13 +46,20 @@ function LockGate({ children }: { children: React.ReactNode }) {
   }, []);
 
   if (state === "loading") {
-    return <main className="app-main"><p className="muted">Opening Pocketwall…</p></main>;
+    return (
+      <>
+        <BrandBar />
+        <main className="app-main"><p className="muted">Opening Pocketwall…</p></main>
+      </>
+    );
   }
   if (state === "locked") {
     return (
+      <>
+      <BrandBar />
       <main className="app-main">
         <p className="kicker">Pocketwall</p>
-        <h1 style={{ fontSize: 36, letterSpacing: "-0.04em" }}>Unlock</h1>
+        <h1 style={{ fontSize: 36 }}>Unlock</h1>
         <p className="muted">This site asks for the Pocketwall password before it will call the firewall.</p>
         <form
           className="stack"
@@ -78,6 +85,7 @@ function LockGate({ children }: { children: React.ReactNode }) {
           <button className="btn" type="submit">Unlock</button>
         </form>
       </main>
+      </>
     );
   }
   return children;

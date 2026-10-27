@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { Inter, Lexend_Exa } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
+const display = Lexend_Exa({ subsets: ["latin"], weight: ["300", "400"], variable: "--font-display" });
 
 export const metadata: Metadata = {
   title: "Pocketwall",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#071018",
+  themeColor: "#0a143a",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -22,7 +23,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
+      <body className={`${inter.className} ${inter.variable} ${display.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>
