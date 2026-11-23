@@ -17,10 +17,13 @@ const more = [
 
 export function BrandBar() {
   return (
-    <header className="brandbar">
-      <img src="/brand/sophos-logo-on-dark.svg" alt="Sophos" />
-      <span className="brandbar-product">Pocketwall</span>
-    </header>
+    <div className="brand-wrap">
+      <header className="brandbar">
+        <img src="/brand/sophos-logo-on-dark.svg" alt="Sophos" />
+        <span className="brandbar-product">Pocketwall</span>
+      </header>
+      <p className="affiliation">Pocketwall is a personal project. It has nothing to do with Sophos and is not officially connected to them.</p>
+    </div>
   );
 }
 

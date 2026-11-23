@@ -8,7 +8,7 @@ const display = Lexend_Exa({ subsets: ["latin"], weight: ["300", "400"], variabl
 
 export const metadata: Metadata = {
   title: "Pocketwall",
-  description: "Mobile console for Sophos Firewall SFOS 23.",
+  description: "Mobile console for Sophos Firewall SFOS 23. A personal project, not officially connected to Sophos.",
   applicationName: "Pocketwall",
   appleWebApp: { capable: true, title: "Pocketwall", statusBarStyle: "black-translucent" },
 };

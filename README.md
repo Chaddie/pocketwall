@@ -2,6 +2,8 @@
 
 A mobile-first console for a Sophos Firewall running SFOS 23. It talks to the firewall configuration REST API at `/api/firewall-config/v1` with an administrator API key as a bearer token.
 
+Pocketwall is a personal project. It has nothing to do with Sophos and is not officially connected to them.
+
 The phone never calls the firewall directly. Pocketwall’s server forwards each request, which avoids browser certificate and cross-origin limits. The API key stays in the browser and is sent only to this app.
 
 ## Run locally
